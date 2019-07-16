@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jul 05 13:44:30 2019
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : ADS1220
+Top-level Entity Name : ADS1220
+Family : Cyclone IV E
+Total logic elements : 1,558
+    Total combinational functions : 798
+    Dedicated logic registers : 1,209
+Total registers : 1209
+Total pins : 37
+Total virtual pins : 0
+Total memory bits : 217,088
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

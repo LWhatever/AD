@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at ADS1220.v(90): always construct contains both blocking and non-blocking assignments
