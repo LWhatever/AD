@@ -1,0 +1,6 @@
+Info (10281): Verilog HDL Declaration information at Clock.v(5): object "CLK" differs only in case from object "clk" in the same scope
+Info (10281): Verilog HDL Declaration information at Clock.v(6): object "done_s" differs only in case from object "Done_S" in the same scope
+Info (10281): Verilog HDL Declaration information at Clock.v(6): object "done_m" differs only in case from object "Done_M" in the same scope
+Info (10281): Verilog HDL Declaration information at Clock.v(6): object "done_d" differs only in case from object "Done_D" in the same scope
+Info (10281): Verilog HDL Declaration information at Clock.v(5): object "CLK" differs only in case from object "Clk" in the same scope
+Info (10281): Verilog HDL Declaration information at Clock.v(6): object "clk" differs only in case from object "Clk" in the same scope

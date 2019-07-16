@@ -1,0 +1,112 @@
+Flow report for Clock
+Fri Dec 29 17:48:30 2017
+Quartus II 64-Bit Version 12.0 Build 178 05/31/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Flow Summary                                                          ;
++---------------------------+-------------------------------------------+
+; Flow Status               ; Successful - Fri Dec 29 17:48:30 2017     ;
+; Quartus II 64-Bit Version ; 12.0 Build 178 05/31/2012 SJ Full Version ;
+; Revision Name             ; Clock                                     ;
+; Top-level Entity Name     ; Display                                   ;
+; Family                    ; MAX II                                    ;
+; Device                    ; EPM240T100C5                              ;
+; Timing Models             ; Final                                     ;
+; Total logic elements      ; 139 / 240 ( 58 % )                        ;
+; Total pins                ; 42 / 80 ( 53 % )                          ;
+; Total virtual pins        ; 0                                         ;
+; UFM blocks                ; 0 / 1 ( 0 % )                             ;
++---------------------------+-------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/29/2017 17:48:23 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Clock               ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                   ;
++------------------------+--------------------------------+---------------+-------------+------------+
+; Assignment Name        ; Value                          ; Default Value ; Entity Name ; Section Id ;
++------------------------+--------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID  ; 53164094062484.151454090204744 ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP ; 85                             ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP ; 0                              ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY       ; Display                        ; Clock         ; --          ; --         ;
++------------------------+--------------------------------+---------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 413 MB              ; 00:00:01                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 558 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 374 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 410 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:06                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; L-ASUS           ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; L-ASUS           ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; L-ASUS           ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; L-ASUS           ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Clock -c Clock
+quartus_fit --read_settings_files=off --write_settings_files=off Clock -c Clock
+quartus_asm --read_settings_files=off --write_settings_files=off Clock -c Clock
+quartus_sta Clock -c Clock
+
+
+

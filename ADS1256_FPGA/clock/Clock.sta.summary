@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CLOCK'
+Slack : -7.330
+TNS   : -261.737
+
+Type  : Setup 'Counter1:cnt_s|D_FF:count0|out[0]'
+Slack : -5.070
+TNS   : -21.952
+
+Type  : Setup 'div_clk:Clk|clk'
+Slack : -4.786
+TNS   : -24.258
+
+Type  : Setup 'Counter1:cnt_m|D_FF:count0|out[0]'
+Slack : -4.400
+TNS   : -28.111
+
+Type  : Setup 'Counter2:cnt_h|D_FF:count0|out[0]'
+Slack : -1.885
+TNS   : -7.514
+
+Type  : Setup 'Sound:sd|clk1'
+Slack : -1.194
+TNS   : -1.194
+
+Type  : Hold 'Counter1:cnt_s|D_FF:count0|out[0]'
+Slack : -5.444
+TNS   : -33.309
+
+Type  : Hold 'Counter1:cnt_m|D_FF:count0|out[0]'
+Slack : -4.800
+TNS   : -31.462
+
+Type  : Hold 'div_clk:Clk|clk'
+Slack : -2.327
+TNS   : -8.398
+
+Type  : Hold 'CLOCK'
+Slack : -1.807
+TNS   : -3.386
+
+Type  : Hold 'Sound:sd|clk1'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Hold 'Counter2:cnt_h|D_FF:count0|out[0]'
+Slack : 1.731
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLOCK'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'Counter1:cnt_m|D_FF:count0|out[0]'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Counter1:cnt_s|D_FF:count0|out[0]'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Counter2:cnt_h|D_FF:count0|out[0]'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Sound:sd|clk1'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'div_clk:Clk|clk'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,373 @@
+Analysis & Synthesis report for Clock
+Fri Dec 29 17:48:25 2017
+Quartus II 64-Bit Version 12.0 Build 178 05/31/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Counter1:cnt_s|D_FF:count0
+ 11. Parameter Settings for User Entity Instance: Counter1:cnt_s|D_FF:count1
+ 12. Parameter Settings for User Entity Instance: Counter1:cnt_m|D_FF:count0
+ 13. Parameter Settings for User Entity Instance: Counter1:cnt_m|D_FF:count1
+ 14. Parameter Settings for User Entity Instance: Counter2:cnt_h|D_FF:count0
+ 15. Parameter Settings for User Entity Instance: Counter2:cnt_h|D_FF:count1
+ 16. Parameter Settings for User Entity Instance: Week:wk|D_FF:count0
+ 17. Port Connectivity Checks: "Week:wk|D_FF:count0"
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                            ;
++-----------------------------+-------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Dec 29 17:48:25 2017     ;
+; Quartus II 64-Bit Version   ; 12.0 Build 178 05/31/2012 SJ Full Version ;
+; Revision Name               ; Clock                                     ;
+; Top-level Entity Name       ; Display                                   ;
+; Family                      ; MAX II                                    ;
+; Total logic elements        ; 164                                       ;
+; Total pins                  ; 42                                        ;
+; Total virtual pins          ; 0                                         ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                             ;
++-----------------------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM240T100C5       ;                    ;
+; Top-level entity name                                                      ; Display            ; Clock              ;
+; Family name                                                                ; MAX II             ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
+; C:/Users/Remote/Desktop/Clock.v  ; yes             ; User Verilog HDL File  ; C:/Users/Remote/Desktop/Clock.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 164   ;
+;     -- Combinational with no register       ; 92    ;
+;     -- Register only                        ; 41    ;
+;     -- Combinational with a register        ; 31    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 41    ;
+;     -- 3 input functions                    ; 9     ;
+;     -- 2 input functions                    ; 67    ;
+;     -- 1 input functions                    ; 6     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 125   ;
+;     -- arithmetic mode                      ; 39    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 28    ;
+;                                             ;       ;
+; Total registers                             ; 72    ;
+; Total logic cells in carry chains           ; 41    ;
+; I/O pins                                    ; 42    ;
+; Maximum fan-out node                        ; CLOCK ;
+; Maximum fan-out                             ; 43    ;
+; Total fan-out                               ; 549   ;
+; Average fan-out                             ; 2.67  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                 ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
+; |Display                   ; 164 (0)     ; 72           ; 0          ; 42   ; 0            ; 92 (0)       ; 41 (0)            ; 31 (0)           ; 41 (0)          ; 0 (0)      ; |Display                            ; work         ;
+;    |Counter1:cnt_m|        ; 19 (7)      ; 8            ; 0          ; 0    ; 0            ; 11 (7)       ; 5 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |Display|Counter1:cnt_m             ; work         ;
+;       |D_FF:count0|        ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |Display|Counter1:cnt_m|D_FF:count0 ; work         ;
+;       |D_FF:count1|        ; 7 (7)       ; 4            ; 0          ; 0    ; 0            ; 3 (3)        ; 3 (3)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Display|Counter1:cnt_m|D_FF:count1 ; work         ;
+;    |Counter1:cnt_s|        ; 18 (6)      ; 8            ; 0          ; 0    ; 0            ; 10 (6)       ; 5 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |Display|Counter1:cnt_s             ; work         ;
+;       |D_FF:count0|        ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |Display|Counter1:cnt_s|D_FF:count0 ; work         ;
+;       |D_FF:count1|        ; 7 (7)       ; 4            ; 0          ; 0    ; 0            ; 3 (3)        ; 3 (3)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Display|Counter1:cnt_s|D_FF:count1 ; work         ;
+;    |Counter2:cnt_h|        ; 21 (8)      ; 8            ; 0          ; 0    ; 0            ; 13 (8)       ; 5 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |Display|Counter2:cnt_h             ; work         ;
+;       |D_FF:count0|        ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |Display|Counter2:cnt_h|D_FF:count0 ; work         ;
+;       |D_FF:count1|        ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 3 (3)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Display|Counter2:cnt_h|D_FF:count1 ; work         ;
+;    |Sound:sd|              ; 43 (43)     ; 18           ; 0          ; 0    ; 0            ; 25 (25)      ; 10 (10)           ; 8 (8)            ; 16 (16)         ; 0 (0)      ; |Display|Sound:sd                   ; work         ;
+;    |Week:wk|               ; 4 (0)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |Display|Week:wk                    ; work         ;
+;       |D_FF:count0|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Display|Week:wk|D_FF:count0        ; work         ;
+;    |div_clk:Clk|           ; 59 (59)     ; 26           ; 0          ; 0    ; 0            ; 33 (33)      ; 16 (16)           ; 10 (10)          ; 25 (25)         ; 0 (0)      ; |Display|div_clk:Clk                ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 72    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 28    ;
+; Number of registers using Asynchronous Load  ; 24    ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                 ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |Display|Week:wk|D_FF:count0|out[2]        ;                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |Display|Counter1:cnt_s|D_FF:count1|out[3] ;                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |Display|Counter1:cnt_m|D_FF:count1|out[0] ;                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |Display|Counter2:cnt_h|D_FF:count1|out[0] ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Counter1:cnt_s|D_FF:count0 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Counter1:cnt_s|D_FF:count1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Counter1:cnt_m|D_FF:count0 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Counter1:cnt_m|D_FF:count1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Counter2:cnt_h|D_FF:count0 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Counter2:cnt_h|D_FF:count1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Week:wk|D_FF:count0 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; n              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Week:wk|D_FF:count0"                                                                                                                                                                ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ld     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ld[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; d      ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 12.0 Build 178 05/31/2012 SJ Full Version
+    Info: Processing started: Fri Dec 29 17:48:22 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Clock -c Clock
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 8 design units, including 8 entities, in source file c:/users/remote/desktop/clock.v
+    Info (12023): Found entity 1: Display
+    Info (12023): Found entity 2: Select
+    Info (12023): Found entity 3: Counter1
+    Info (12023): Found entity 4: Counter2
+    Info (12023): Found entity 5: Week
+    Info (12023): Found entity 6: D_FF
+    Info (12023): Found entity 7: div_clk
+    Info (12023): Found entity 8: Sound
+Info (12127): Elaborating entity "Display" for the top level hierarchy
+Info (12128): Elaborating entity "div_clk" for hierarchy "div_clk:Clk"
+Info (12128): Elaborating entity "Counter1" for hierarchy "Counter1:cnt_s"
+Info (12128): Elaborating entity "D_FF" for hierarchy "Counter1:cnt_s|D_FF:count0"
+Info (12128): Elaborating entity "Counter2" for hierarchy "Counter2:cnt_h"
+Info (12128): Elaborating entity "Sound" for hierarchy "Sound:sd"
+Warning (10230): Verilog HDL assignment warning at Clock.v(143): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "Week" for hierarchy "Week:wk"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (21057): Implemented 206 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 164 logic cells
+Info (144001): Generated suppressed messages file D:/Project/clock/Clock.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 413 megabytes
+    Info: Processing ended: Fri Dec 29 17:48:25 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Project/clock/Clock.map.smsg.
+
+
